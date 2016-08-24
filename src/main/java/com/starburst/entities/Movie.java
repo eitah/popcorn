@@ -72,12 +72,20 @@ public class Movie {
     public Rating getRating() { return rating; }
     public void setRating(Rating rating) { this.rating = rating; }
 
+
+
     // unidirectional relationship betwee movies and studios - CASCADE DETACH, not CASCADE PERSIST, NOT CASCADE ALL.
     // Detatch state means dont save the entire object just the ID of the related object
     @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "STUDIO_ID")
-    public Studio getStudio() { return studio; }
-    public void setStudio(Studio studio) { this.studio = studio; }
+    public Studio getStudios() {
+        return studio;
+    }
+
+    public void setStudios(Studio studio) {
+        this.studio = studio;
+    }
+
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "actors_movies",

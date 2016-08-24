@@ -1,5 +1,6 @@
 package com.starburst.repositories;
 
+import com.starburst.entities.Actor;
 import com.starburst.entities.Movie;
 import com.starburst.entities.Studio;
 import org.springframework.data.domain.Page;
@@ -12,10 +13,11 @@ public interface IStudioRepository extends PagingAndSortingRepository<Studio, In
     // JPQL JPA Query Language - queries the models.  The select from Movie (class),
     // In the Movie class, there is a method called "studio" where s.id is the same as the ":id" in the line below
     @Query("select m from Movie m join m.studio s where s.id = :id")
-    public Page<Movie> findAllMoviesByStudioID(@Param("id") int id, Pageable pageable);  // the query returns movies because <Movie> is the generic
+    public Page<Movie> findAllMoviesByStudioId(@Param("id") int id, Pageable pageable);  // the query returns movies because <Movie> is the generic
 
     // to write straight sql instead of using JPQL, use the @NativeQuery.  The drawback to using SQL is that paging and sorting can't be handled by JPA
 
-
+    @Query("select distinct a from Movie m join m.studio s join m.actors a where s.id = :id")
+    public Page<Actor> findAllActorsByStudioId(@Param("id") int id, Pageable pageable);  // the query returns movies because <Movie> is the generic
 
 }

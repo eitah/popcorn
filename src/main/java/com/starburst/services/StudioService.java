@@ -1,5 +1,6 @@
 package com.starburst.services;
 
+import com.starburst.entities.Actor;
 import com.starburst.entities.Movie;
 import com.starburst.entities.Studio;
 import com.starburst.repositories.IStudioRepository;
@@ -27,10 +28,19 @@ public class StudioService {
 
     }
 
+
     public Page<Movie> findAllMoviesByStudioId(int id, int page) {
         Integer itemsPerPage = 3;
         PageRequest pr = new PageRequest(page, itemsPerPage);
-        return this.repository.findAllMoviesByStudioID(id, pr);
+        return this.repository.findAllMoviesByStudioId(id, pr);
+
+    }
+
+
+    public Page<Actor> findAllActorsByStudioId(int id, int page) {
+        Integer itemsPerPage = 3;
+        PageRequest pr = new PageRequest(page, itemsPerPage);
+        return this.repository.findAllActorsByStudioId(id, pr);
 
     }
 

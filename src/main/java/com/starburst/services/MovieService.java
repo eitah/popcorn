@@ -1,11 +1,14 @@
 package com.starburst.services;
 
 import com.starburst.entities.Movie;
+import com.starburst.enums.Rating;
 import com.starburst.repositories.IMovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 // this is the business layer. Needs @Service annotation
 
@@ -23,6 +26,15 @@ public class MovieService {
         PageRequest pr = new PageRequest(page, itemsPerPage);
         return this.repository.findAll(pr);
 
+    }
+
+
+    public Movie findByName(String name) {
+        return this.repository.findByName(name);
+    }
+
+    public List<Movie> findByRatingOrderByReleasedDesc(Rating rating) {
+        return this.repository.findByRatingOrderByReleasedByDesc(rating);
     }
 
 
