@@ -1,0 +1,537 @@
+/usr/local/mysql/bin/mysqld, Version: 5.7.14 (MySQL Community Server (GPL)). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+2016-08-24T20:00:05.810775Z	  795 Query	SELECT 1
+2016-08-24T20:00:05.811195Z	  795 Query	set session transaction read only
+2016-08-24T20:00:05.811390Z	  795 Query	SET autocommit=0
+2016-08-24T20:00:05.812131Z	  795 Query	select count(actor0_.id) as col_0_0_ from movies actor0_
+2016-08-24T20:00:05.813215Z	  795 Query	select actor0_.id as id1_0_, actor0_.birthday as birthday2_0_, actor0_.created_at as created_3_0_, actor0_.gender as gender4_0_, actor0_.name as name5_0_, actor0_.updated_at as updated_6_0_, actor0_.version as version7_0_ from movies actor0_ limit 3
+2016-08-24T20:00:05.813802Z	  795 Query	rollback
+2016-08-24T20:00:05.813989Z	  795 Query	SET autocommit=1
+2016-08-24T20:00:05.814217Z	  795 Query	select @@session.tx_read_only
+2016-08-24T20:00:05.814480Z	  795 Query	set session transaction read write
+2016-08-24T20:01:27.173387Z	  795 Query	SELECT 1
+2016-08-24T20:01:27.173760Z	  795 Query	set session transaction read only
+2016-08-24T20:01:27.173985Z	  795 Query	SET autocommit=0
+2016-08-24T20:01:27.177820Z	  795 Query	select count(movie0_.id) as col_0_0_ from movies movie0_
+2016-08-24T20:01:27.178628Z	  795 Query	select movie0_.id as id1_0_, movie0_.created_at as created_3_0_, movie0_.genre as genre8_0_, movie0_.name as name5_0_, movie0_.rating as rating9_0_, movie0_.released as release10_0_, movie0_.studio_id as studio_11_0_, movie0_.updated_at as updated_6_0_, movie0_.version as version7_0_ from movies movie0_ limit 3
+2016-08-24T20:01:27.190344Z	  795 Query	select studio0_.id as id1_1_0_, studio0_.created_at as created_2_1_0_, studio0_.est as est3_1_0_, studio0_.name as name4_1_0_, studio0_.updated_at as updated_5_1_0_, studio0_.version as version6_1_0_ from studios studio0_ where studio0_.id=1
+2016-08-24T20:01:27.194053Z	  795 Query	select studio0_.id as id1_1_0_, studio0_.created_at as created_2_1_0_, studio0_.est as est3_1_0_, studio0_.name as name4_1_0_, studio0_.updated_at as updated_5_1_0_, studio0_.version as version6_1_0_ from studios studio0_ where studio0_.id=2
+2016-08-24T20:01:27.196668Z	  795 Query	commit
+2016-08-24T20:01:27.196945Z	  795 Query	SET autocommit=1
+2016-08-24T20:01:27.197220Z	  795 Query	select @@session.tx_read_only
+2016-08-24T20:01:27.197488Z	  795 Query	set session transaction read write
+2016-08-24T20:03:07.439011Z	  449 Query	SELECT * FROM popcorn.actors
+LIMIT 0, 1000
+2016-08-24T20:03:07.439399Z	  448 Query	SELECT st.* FROM performance_schema.events_statements_current st JOIN performance_schema.threads thr ON thr.thread_id = st.thread_id WHERE thr.processlist_id = 449
+2016-08-24T20:03:07.439869Z	  448 Query	SELECT st.* FROM performance_schema.events_stages_history_long st WHERE st.nesting_event_id = 93
+2016-08-24T20:03:07.440183Z	  448 Query	SELECT st.* FROM performance_schema.events_waits_history_long st WHERE st.nesting_event_id = 93
+2016-08-24T20:03:07.453870Z	  448 Query	SHOW INDEX FROM `popcorn`.`actors`
+2016-08-24T20:04:49.323736Z	  795 Quit	
+2016-08-24T20:04:49.324505Z	  794 Quit	
+2016-08-24T20:04:49.324602Z	  793 Quit	
+2016-08-24T20:04:49.324647Z	  792 Quit	
+2016-08-24T20:04:49.324681Z	  791 Quit	
+2016-08-24T20:04:49.324710Z	  790 Quit	
+2016-08-24T20:04:49.324765Z	  789 Quit	
+2016-08-24T20:04:49.324831Z	  788 Quit	
+2016-08-24T20:04:49.324854Z	  787 Quit	
+2016-08-24T20:04:49.324903Z	  786 Quit	
+2016-08-24T20:04:54.481117Z	  796 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.484677Z	  796 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.504061Z	  796 Query	SET NAMES latin1
+2016-08-24T20:04:54.504247Z	  796 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.504591Z	  796 Query	SET autocommit=1
+2016-08-24T20:04:54.506529Z	  797 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.506827Z	  797 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.507336Z	  797 Query	SET NAMES latin1
+2016-08-24T20:04:54.507475Z	  797 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.507687Z	  797 Query	SET autocommit=1
+2016-08-24T20:04:54.509016Z	  798 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.509235Z	  798 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.509670Z	  798 Query	SET NAMES latin1
+2016-08-24T20:04:54.509787Z	  798 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.509904Z	  798 Query	SET autocommit=1
+2016-08-24T20:04:54.510933Z	  799 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.511107Z	  799 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.511532Z	  799 Query	SET NAMES latin1
+2016-08-24T20:04:54.511626Z	  799 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.511728Z	  799 Query	SET autocommit=1
+2016-08-24T20:04:54.512759Z	  800 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.512972Z	  800 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.513546Z	  800 Query	SET NAMES latin1
+2016-08-24T20:04:54.513681Z	  800 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.513848Z	  800 Query	SET autocommit=1
+2016-08-24T20:04:54.515111Z	  801 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.515361Z	  801 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.515907Z	  801 Query	SET NAMES latin1
+2016-08-24T20:04:54.516330Z	  801 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.516505Z	  801 Query	SET autocommit=1
+2016-08-24T20:04:54.517986Z	  802 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.518224Z	  802 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.518738Z	  802 Query	SET NAMES latin1
+2016-08-24T20:04:54.518863Z	  802 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.519006Z	  802 Query	SET autocommit=1
+2016-08-24T20:04:54.520606Z	  803 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.520868Z	  803 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.521506Z	  803 Query	SET NAMES latin1
+2016-08-24T20:04:54.521646Z	  803 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.521808Z	  803 Query	SET autocommit=1
+2016-08-24T20:04:54.523382Z	  804 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.523602Z	  804 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.524175Z	  804 Query	SET NAMES latin1
+2016-08-24T20:04:54.524331Z	  804 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.524471Z	  804 Query	SET autocommit=1
+2016-08-24T20:04:54.527822Z	  805 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:04:54.528132Z	  805 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:04:54.528677Z	  805 Query	SET NAMES latin1
+2016-08-24T20:04:54.528837Z	  805 Query	SET character_set_results = NULL
+2016-08-24T20:04:54.529010Z	  805 Query	SET autocommit=1
+2016-08-24T20:05:09.904535Z	  805 Query	set session transaction read only
+2016-08-24T20:05:09.904879Z	  805 Query	SET autocommit=0
+2016-08-24T20:05:09.931999Z	  805 Query	select count(actor0_.id) as col_0_0_ from movies actor0_
+2016-08-24T20:05:09.934686Z	  805 Query	select actor0_.id as id1_0_, actor0_.birthday as birthday2_0_, actor0_.created_at as created_3_0_, actor0_.gender as gender4_0_, actor0_.name as name5_0_, actor0_.updated_at as updated_6_0_, actor0_.version as version7_0_ from movies actor0_ limit 3
+2016-08-24T20:05:09.940284Z	  805 Query	rollback
+2016-08-24T20:05:09.940496Z	  805 Query	SET autocommit=1
+2016-08-24T20:05:09.941487Z	  805 Query	select @@session.tx_read_only
+2016-08-24T20:05:09.941810Z	  805 Query	set session transaction read write
+2016-08-24T20:07:12.340680Z	  806 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:07:12.344748Z	  806 Query	/* mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 ) */SHOW VARIABLES WHERE Variable_name ='language' OR Variable_name = 'net_write_timeout' OR Variable_name = 'interactive_timeout' OR Variable_name = 'wait_timeout' OR Variable_name = 'character_set_client' OR Variable_name = 'character_set_connection' OR Variable_name = 'character_set' OR Variable_name = 'character_set_server' OR Variable_name = 'tx_isolation' OR Variable_name = 'transaction_isolation' OR Variable_name = 'character_set_results' OR Variable_name = 'timezone' OR Variable_name = 'time_zone' OR Variable_name = 'system_time_zone' OR Variable_name = 'lower_case_table_names' OR Variable_name = 'max_allowed_packet' OR Variable_name = 'net_buffer_length' OR Variable_name = 'sql_mode' OR Variable_name = 'query_cache_type' OR Variable_name = 'query_cache_size' OR Variable_name = 'license' OR Variable_name = 'init_connect'
+2016-08-24T20:07:12.360889Z	  806 Query	/* mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 ) */SELECT @@session.auto_increment_increment
+2016-08-24T20:07:12.361838Z	  806 Query	SET NAMES utf8
+2016-08-24T20:07:12.362209Z	  806 Query	SET autocommit=1
+2016-08-24T20:07:12.426793Z	  806 Quit	
+2016-08-24T20:07:15.432982Z	  807 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:07:15.437075Z	  807 Query	/* mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 ) */SHOW VARIABLES WHERE Variable_name ='language' OR Variable_name = 'net_write_timeout' OR Variable_name = 'interactive_timeout' OR Variable_name = 'wait_timeout' OR Variable_name = 'character_set_client' OR Variable_name = 'character_set_connection' OR Variable_name = 'character_set' OR Variable_name = 'character_set_server' OR Variable_name = 'tx_isolation' OR Variable_name = 'transaction_isolation' OR Variable_name = 'character_set_results' OR Variable_name = 'timezone' OR Variable_name = 'time_zone' OR Variable_name = 'system_time_zone' OR Variable_name = 'lower_case_table_names' OR Variable_name = 'max_allowed_packet' OR Variable_name = 'net_buffer_length' OR Variable_name = 'sql_mode' OR Variable_name = 'query_cache_type' OR Variable_name = 'query_cache_size' OR Variable_name = 'license' OR Variable_name = 'init_connect'
+2016-08-24T20:07:15.453384Z	  807 Query	/* mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 ) */SELECT @@session.auto_increment_increment
+2016-08-24T20:07:15.454689Z	  807 Query	SET NAMES utf8
+2016-08-24T20:07:15.455047Z	  807 Query	SET autocommit=1
+2016-08-24T20:07:15.528104Z	  807 Query	SET autocommit=1
+2016-08-24T20:07:15.538376Z	  807 Query	select database(), schema(), left(user(),instr(concat(user(),'@'),'@')-1)
+2016-08-24T20:07:15.556714Z	  807 Query	SET autocommit=0
+2016-08-24T20:07:15.560962Z	  807 Query	select schema_name as name
+from information_schema.schemata
+order by if(schema() = schema_name, 1, 2), schema_name
+2016-08-24T20:07:15.571496Z	  807 Query	select table_name, table_type, table_comment
+from information_schema.tables
+where table_schema = 'popcorn'
+2016-08-24T20:07:15.579866Z	  807 Query	select
+column_name,
+column_type,
+column_default,
+table_name,
+column_comment,
+is_nullable,
+extra
+from information_schema.columns
+where table_schema = 'popcorn'
+order by table_name, ordinal_position
+2016-08-24T20:07:15.587891Z	  807 Query	select
+  table_name,
+  index_name,
+  group_concat(column_name order by seq_in_index separator '\n') as column_names,
+  non_unique
+from information_schema.statistics
+where table_schema = 'popcorn' and
+      index_schema = 'popcorn' and
+      index_name <> 'PRIMARY'
+group by
+  table_catalog,
+  table_schema,
+  table_name,
+  index_name,
+  index_type,
+  non_unique
+2016-08-24T20:07:15.594307Z	  807 Query	select
+ specific_name,
+ routine_type,
+ routine_definition,
+ routine_comment,
+ dtd_identifier
+from information_schema.routines
+where routine_schema = 'popcorn'
+2016-08-24T20:07:15.600384Z	  807 Query	select table_name from information_schema.tables
+where table_schema = 'information_schema' and table_name = 'parameters'
+2016-08-24T20:07:15.605387Z	  807 Query	select specific_name,
+parameter_name,
+parameter_mode,
+dtd_identifier
+from information_schema.parameters
+where specific_schema = 'popcorn' and ordinal_position > 0
+order by specific_name, ordinal_position
+2016-08-24T20:07:15.611532Z	  807 Query	select
+  c.constraint_name,
+  c.table_name,
+  c.constraint_type,
+  group_concat(u.column_name order by u.ordinal_position separator '\n' ) as column_names,
+  u.referenced_table_schema,
+  u.referenced_table_name,
+  group_concat(u.referenced_column_name order by u.position_in_unique_constraint separator '\n') as ref_column_names,
+  r.match_option,
+  r.update_rule,
+  r.delete_rule
+from information_schema.table_constraints c
+  left join information_schema.key_column_usage u on
+      u.constraint_schema   = c.constraint_schema
+  and u.constraint_name     = c.constraint_name
+  and u.table_name = c.table_name
+  and u.table_schema = 'popcorn'
+  and ((c.constraint_type = 'UNIQUE' and u.referenced_table_name is null) or c.constraint_type <> 'UNIQUE')
+  left join information_schema.referential_constraints r on
+      r.constraint_schema   = c.constraint_schema
+  and r.constraint_name     = c.constraint_name
+where c.table_schema = 'popcorn'
+  and u.table_schema = 'popcorn'
+group by
+    c.constraint_schema
+  , c.constraint_name
+  , c.table_schema
+  , c.table_name
+  , c.constraint_type
+  , u.referenced_table_schema
+  , u.referenced_table_name
+  , r.match_option
+  , r.update_rule
+  , r.delete_rule
+order by
+    c.table_schema
+  , c.table_name
+  , c.constraint_schema
+  , c.constraint_name
+2016-08-24T20:07:15.626332Z	  807 Query	select
+trigger_name,
+event_object_table,
+action_statement,
+event_manipulation,
+action_timing
+from information_schema.triggers
+where trigger_schema = 'popcorn'
+2016-08-24T20:07:15.630877Z	  807 Query	commit
+2016-08-24T20:07:15.633118Z	  807 Query	rollback
+2016-08-24T20:07:15.633256Z	  807 Query	SET autocommit=1
+2016-08-24T20:07:15.646702Z	  807 Quit	
+2016-08-24T20:07:18.382216Z	  808 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:07:18.382596Z	  808 Query	/* mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 ) */SHOW VARIABLES WHERE Variable_name ='language' OR Variable_name = 'net_write_timeout' OR Variable_name = 'interactive_timeout' OR Variable_name = 'wait_timeout' OR Variable_name = 'character_set_client' OR Variable_name = 'character_set_connection' OR Variable_name = 'character_set' OR Variable_name = 'character_set_server' OR Variable_name = 'tx_isolation' OR Variable_name = 'transaction_isolation' OR Variable_name = 'character_set_results' OR Variable_name = 'timezone' OR Variable_name = 'time_zone' OR Variable_name = 'system_time_zone' OR Variable_name = 'lower_case_table_names' OR Variable_name = 'max_allowed_packet' OR Variable_name = 'net_buffer_length' OR Variable_name = 'sql_mode' OR Variable_name = 'query_cache_type' OR Variable_name = 'query_cache_size' OR Variable_name = 'license' OR Variable_name = 'init_connect'
+2016-08-24T20:07:18.384232Z	  808 Query	/* mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 ) */SELECT @@session.auto_increment_increment
+2016-08-24T20:07:18.384634Z	  808 Query	SET NAMES utf8
+2016-08-24T20:07:18.384817Z	  808 Query	SET autocommit=1
+2016-08-24T20:07:18.387642Z	  808 Query	SET autocommit=1
+2016-08-24T20:07:18.388322Z	  808 Query	set session transaction read write
+2016-08-24T20:07:18.403454Z	  808 Query	select @@session.tx_read_only
+2016-08-24T20:07:18.403751Z	  808 Query	use popcorn
+2016-08-24T20:07:18.414783Z	  808 Query	SET net_write_timeout=600
+2016-08-24T20:07:18.415003Z	  808 Query	SET SQL_SELECT_LIMIT=502
+2016-08-24T20:07:18.415176Z	  808 Query	SELECT t.* FROM popcorn.actors t
+2016-08-24T20:07:18.499064Z	  808 Query	SET SQL_SELECT_LIMIT=DEFAULT
+2016-08-24T20:07:18.499270Z	  808 Query	SHOW WARNINGS
+2016-08-24T20:07:32.311576Z	  808 Quit	
+2016-08-24T20:08:15.683044Z	  805 Quit	
+2016-08-24T20:08:15.683805Z	  804 Quit	
+2016-08-24T20:08:15.683866Z	  803 Quit	
+2016-08-24T20:08:15.683953Z	  801 Quit	
+2016-08-24T20:08:15.683954Z	  802 Quit	
+2016-08-24T20:08:15.683984Z	  800 Quit	
+2016-08-24T20:08:15.684039Z	  799 Quit	
+2016-08-24T20:08:15.684089Z	  798 Quit	
+2016-08-24T20:08:15.684094Z	  797 Quit	
+2016-08-24T20:08:15.684204Z	  796 Quit	
+2016-08-24T20:08:19.933294Z	  809 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.937048Z	  809 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.955626Z	  809 Query	SET NAMES latin1
+2016-08-24T20:08:19.955786Z	  809 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.956123Z	  809 Query	SET autocommit=1
+2016-08-24T20:08:19.958121Z	  810 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.958397Z	  810 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.959063Z	  810 Query	SET NAMES latin1
+2016-08-24T20:08:19.959222Z	  810 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.959345Z	  810 Query	SET autocommit=1
+2016-08-24T20:08:19.960890Z	  811 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.961138Z	  811 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.961598Z	  811 Query	SET NAMES latin1
+2016-08-24T20:08:19.961695Z	  811 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.961822Z	  811 Query	SET autocommit=1
+2016-08-24T20:08:19.963085Z	  812 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.963259Z	  812 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.963685Z	  812 Query	SET NAMES latin1
+2016-08-24T20:08:19.963816Z	  812 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.963992Z	  812 Query	SET autocommit=1
+2016-08-24T20:08:19.965125Z	  813 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.965329Z	  813 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.965718Z	  813 Query	SET NAMES latin1
+2016-08-24T20:08:19.965853Z	  813 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.965983Z	  813 Query	SET autocommit=1
+2016-08-24T20:08:19.966999Z	  814 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.967173Z	  814 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.967581Z	  814 Query	SET NAMES latin1
+2016-08-24T20:08:19.968120Z	  814 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.968368Z	  814 Query	SET autocommit=1
+2016-08-24T20:08:19.969781Z	  815 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.970031Z	  815 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.970709Z	  815 Query	SET NAMES latin1
+2016-08-24T20:08:19.970833Z	  815 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.971010Z	  815 Query	SET autocommit=1
+2016-08-24T20:08:19.972361Z	  816 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.972595Z	  816 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.973028Z	  816 Query	SET NAMES latin1
+2016-08-24T20:08:19.973167Z	  816 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.973342Z	  816 Query	SET autocommit=1
+2016-08-24T20:08:19.974619Z	  817 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.974868Z	  817 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.975300Z	  817 Query	SET NAMES latin1
+2016-08-24T20:08:19.975437Z	  817 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.975588Z	  817 Query	SET autocommit=1
+2016-08-24T20:08:19.976677Z	  818 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:08:19.976897Z	  818 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:08:19.977323Z	  818 Query	SET NAMES latin1
+2016-08-24T20:08:19.977465Z	  818 Query	SET character_set_results = NULL
+2016-08-24T20:08:19.977621Z	  818 Query	SET autocommit=1
+2016-08-24T20:08:22.351869Z	  818 Query	set session transaction read only
+2016-08-24T20:08:22.352164Z	  818 Query	SET autocommit=0
+2016-08-24T20:08:22.377604Z	  818 Query	select count(actor0_.id) as col_0_0_ from actors actor0_
+2016-08-24T20:08:22.380272Z	  818 Query	select actor0_.id as id1_0_, actor0_.birthday as birthday2_0_, actor0_.created_at as created_3_0_, actor0_.gender as gender4_0_, actor0_.name as name5_0_, actor0_.updated_at as updated_6_0_, actor0_.version as version7_0_ from actors actor0_ limit 3
+2016-08-24T20:08:22.389632Z	  818 Query	commit
+2016-08-24T20:08:22.389929Z	  818 Query	SET autocommit=1
+2016-08-24T20:08:22.390267Z	  818 Query	select @@session.tx_read_only
+2016-08-24T20:08:22.390489Z	  818 Query	set session transaction read write
+2016-08-24T20:14:31.053483Z	  448 Query	SHOW DATABASES LIKE 'popcorn'
+2016-08-24T20:14:31.053729Z	  448 Query	SHOW FULL TABLES FROM `popcorn` LIKE '%'
+2016-08-24T20:17:36.039123Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'actors'
+2016-08-24T20:17:36.039463Z	  448 Query	SHOW CREATE TABLE `popcorn`.`actors`
+2016-08-24T20:17:36.039730Z	  448 Query	SHOW SESSION VARIABLES LIKE 'sql_mode'
+2016-08-24T20:17:37.239070Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'actors_movies'
+2016-08-24T20:17:37.239514Z	  448 Query	SHOW CREATE TABLE `popcorn`.`actors_movies`
+2016-08-24T20:17:41.816969Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'movies'
+2016-08-24T20:17:41.817411Z	  448 Query	SHOW CREATE TABLE `popcorn`.`movies`
+2016-08-24T20:17:41.817798Z	  448 Query	SHOW SESSION VARIABLES LIKE 'sql_mode'
+2016-08-24T20:18:15.454587Z	  448 Query	SHOW FULL TABLES FROM `popcorn` WHERE `Tables_in_popcorn` = 'actors_movies' AND Table_type != 'VIEW'
+2016-08-24T20:18:15.454864Z	  448 Query	SHOW FULL TABLES FROM `popcorn` WHERE `Tables_in_popcorn` = 'actors_movies' AND Table_type = 'VIEW'
+2016-08-24T20:18:17.855362Z	  449 Query	CREATE TABLE `popcorn`.`actors_movies` (
+  `actor_id` INT NOT NULL,
+  `movie_id` INT NOT NULL,
+  PRIMARY KEY (`actor_id`, `movie_id`),
+  INDEX `fk_movie_idx` (`movie_id` ASC),
+  CONSTRAINT `fk_actor`
+    FOREIGN KEY (`actor_id`)
+    REFERENCES `popcorn`.`actors` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_movie`
+    FOREIGN KEY (`movie_id`)
+    REFERENCES `popcorn`.`movies` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+2016-08-24T20:18:18.200008Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'actors_movies'
+2016-08-24T20:18:18.200432Z	  448 Query	SHOW CREATE TABLE `popcorn`.`actors_movies`
+2016-08-24T20:18:18.200984Z	  448 Query	SHOW SESSION VARIABLES LIKE 'sql_mode'
+2016-08-24T20:18:18.203835Z	  448 Query	SHOW DATABASES LIKE 'popcorn'
+2016-08-24T20:18:18.204069Z	  448 Query	SHOW FULL TABLES FROM `popcorn` LIKE '%'
+2016-08-24T20:18:18.204669Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'actors'
+2016-08-24T20:18:18.205015Z	  448 Query	SHOW CREATE TABLE `popcorn`.`actors`
+2016-08-24T20:18:18.205293Z	  448 Query	SHOW SESSION VARIABLES LIKE 'sql_mode'
+2016-08-24T20:18:22.579804Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'actors_movies'
+2016-08-24T20:18:22.580226Z	  448 Query	SHOW CREATE TABLE `popcorn`.`actors_movies`
+2016-08-24T20:18:22.580574Z	  448 Query	SHOW SESSION VARIABLES LIKE 'sql_mode'
+2016-08-24T20:18:22.583126Z	  448 Query	SHOW DATABASES LIKE 'popcorn'
+2016-08-24T20:18:22.583397Z	  448 Query	SHOW FULL TABLES FROM `popcorn` LIKE '%'
+2016-08-24T20:18:22.584039Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'actors'
+2016-08-24T20:18:22.584370Z	  448 Query	SHOW CREATE TABLE `popcorn`.`actors`
+2016-08-24T20:18:22.584610Z	  448 Query	SHOW SESSION VARIABLES LIKE 'sql_mode'
+2016-08-24T20:19:45.159320Z	  449 Query	INSERT INTO `popcorn`.`actors_movies` (`actor_id`, `movie_id`, `pay`)
+VALUES
+  (1, 1, 1200000),
+  (2, 1, 2200000),
+  (3, 1, 3200000),
+  (4, 1, 4200000),
+  (5, 2, 1500000),
+  (6, 2, 3200000),
+  (7, 2, 2200000),
+  (8, 3, 6200000),
+  (9, 4, 8200000),
+  (10, 4, 2200000),
+  (11, 4, 4200000),
+  (12, 4, 7200000),
+  (13, 4, 3200000),
+  (14, 4, 200000),
+  (1, 4, 12000),
+  (2, 4, 24000),
+  (3, 4, 320000),
+  (4, 4, 4200000),
+  (5, 4, 52000),
+  (6, 5, 6200000),
+  (7, 5, 7200000),
+  (8, 5, 820000),
+  (9, 5, 12000),
+  (10, 5, 12000),
+  (11, 5, 22000),
+  (12, 5, 3200000),
+  (13, 5, 4200000),
+  (14, 5, 1000),
+  (1, 5, 5200000),
+  (2, 6, 62000000),
+  (3, 6, 720000),
+  (4, 6, 8200000),
+  (5, 6, 200000),
+  (6, 6, 4200000),
+  (7, 6, 8200000),
+  (8, 6, 1200000),
+  (9, 6, 2200000),
+  (10, 6, 32000),
+  (11, 6, 4200000),
+  (12, 6, 920000)
+2016-08-24T20:22:34.966908Z	  449 Query	INSERT INTO `popcorn`.`actors_movies` (`actor_id`, `movie_id`)
+VALUES
+  (1, 1),
+  (2, 1),
+  (3, 1),
+  (4, 1),
+  (5, 2),
+  (6, 2),
+  (7, 2),
+  (8, 3),
+  (9, 4),
+  (10, 4),
+  (11, 4),
+  (12, 4),
+  (13, 4),
+  (14, 4),
+  (1, 4),
+  (2, 4),
+  (3, 4),
+  (4, 4),
+  (5, 4),
+  (6, 5),
+  (7, 5),
+  (8, 5),
+  (9, 5),
+  (10, 5),
+  (11, 5),
+  (12, 5),
+  (13, 5),
+  (14, 5),
+  (1, 5),
+  (2, 6),
+  (3, 6),
+  (4, 6),
+  (5, 6),
+  (6, 6),
+  (7, 6),
+  (8, 6),
+  (9, 6),
+  (10, 6),
+  (11, 6),
+  (12, 6)
+2016-08-24T20:22:34.971376Z	  448 Query	SELECT st.* FROM performance_schema.events_statements_current st JOIN performance_schema.threads thr ON thr.thread_id = st.thread_id WHERE thr.processlist_id = 449
+2016-08-24T20:22:34.971803Z	  448 Query	SELECT st.* FROM performance_schema.events_stages_history_long st WHERE st.nesting_event_id = 100
+2016-08-24T20:22:34.972040Z	  448 Query	SELECT st.* FROM performance_schema.events_waits_history_long st WHERE st.nesting_event_id = 100
+2016-08-24T20:23:05.289988Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'actors_movies'
+2016-08-24T20:23:05.290418Z	  448 Query	SHOW CREATE TABLE `popcorn`.`actors_movies`
+2016-08-24T20:23:05.290749Z	  448 Query	SHOW SESSION VARIABLES LIKE 'sql_mode'
+2016-08-24T20:23:05.327763Z	  448 Query	SHOW DATABASES LIKE 'popcorn'
+2016-08-24T20:23:05.328062Z	  448 Query	SHOW FULL TABLES FROM `popcorn` LIKE '%'
+2016-08-24T20:23:06.661111Z	  448 Query	show columns from `mysql`.`tables_priv` like 'table_priv'
+2016-08-24T20:23:06.665373Z	  448 Query	show columns from `mysql`.`columns_priv` like 'Column_priv'
+2016-08-24T20:23:06.671833Z	  448 Query	select * from information_schema.tables WHERE table_schema = 'popcorn' AND table_name = 'actors_movies'
+2016-08-24T20:23:06.678313Z	  448 Query	select count(*) column_count from information_schema.columns WHERE table_schema = 'popcorn' and table_name = 'actors_movies'
+2016-08-24T20:23:06.679036Z	  448 Query	select `COLUMN_NAME`, `COLUMN_TYPE`, `COLUMN_DEFAULT`, `IS_NULLABLE`, `CHARACTER_SET_NAME`, `COLLATION_NAME`, `PRIVILEGES`, `EXTRA`, `COLUMN_COMMENT` from information_schema.columns where table_schema = 'popcorn' and table_name = 'actors_movies'
+2016-08-24T20:23:06.680695Z	  448 Query	SHOW INDEX FROM `popcorn`.`actors_movies`
+2016-08-24T20:23:06.681999Z	  448 Query	SHOW COLUMNS FROM `popcorn`.`actors_movies`
+2016-08-24T20:23:06.682677Z	  448 Query	show triggers from `popcorn` like 'actors_movies'
+2016-08-24T20:23:06.683409Z	  448 Query	select `constraint_name`, `constraint_schema`, `table_name`, `column_name`, `referenced_table_schema`, `referenced_table_name`, `referenced_column_name`                     FROM information_schema.KEY_COLUMN_USAGE                     WHERE ((REFERENCED_TABLE_SCHEMA = 'popcorn' AND referenced_table_name = 'actors_movies') OR (TABLE_SCHEMA='popcorn' and table_name = 'actors_movies')) AND                     REFERENCED_TABLE_NAME is not null ORDER BY TABLE_NAME, COLUMN_NAME
+2016-08-24T20:23:06.687119Z	  448 Query	select `partition_name`, `subpartition_name`, `partition_ordinal_position`, `subpartition_ordinal_position`, `partition_method`, `subpartition_method`, `partition_expression`, `subpartition_expression`, `partition_description`, `table_rows`, `avg_row_length`, `data_length`, `max_data_length`, `index_length`, `create_time`, `update_time`, `check_time`                     FROM information_schema.partitions                     WHERE TABLE_SCHEMA = 'popcorn' AND TABLE_NAME = 'actors_movies' AND PARTITION_NAME IS NOT NULL ORDER BY PARTITION_NAME
+2016-08-24T20:23:06.687946Z	  448 Query	SELECT '<global>' as scope,user,host,Select_priv AS 'Select',Insert_priv AS 'Insert',Update_priv AS 'Update',Delete_priv AS 'Delete',Create_priv AS 'Create',Drop_priv AS 'Drop',Grant_priv AS 'Grant',References_priv AS 'References',Index_priv AS 'Index',Alter_priv AS 'Alter',Create_View_priv AS 'Create View',Show_view_priv AS 'Show view',Trigger_priv AS 'Trigger' FROM mysql.user WHERE Select_priv = 'Y' OR Insert_priv = 'Y' OR Update_priv = 'Y' OR Delete_priv = 'Y' OR Create_priv = 'Y' OR Drop_priv = 'Y' OR Grant_priv = 'Y' OR References_priv = 'Y' OR Index_priv = 'Y' OR Alter_priv = 'Y' OR Create_View_priv = 'Y' OR Show_view_priv = 'Y' OR Trigger_priv = 'Y'
+2016-08-24T20:23:06.688482Z	  448 Query	SELECT Db as scope,user,host,Select_priv AS 'Select',Insert_priv AS 'Insert',Update_priv AS 'Update',Delete_priv AS 'Delete',Create_priv AS 'Create',Drop_priv AS 'Drop',Grant_priv AS 'Grant',References_priv AS 'References',Index_priv AS 'Index',Alter_priv AS 'Alter',Create_View_priv AS 'Create View',Show_view_priv AS 'Show view',Trigger_priv AS 'Trigger' FROM mysql.db WHERE 'popcorn' like db
+2016-08-24T20:23:06.688938Z	  448 Query	SELECT CONCAT(Db,'.',Table_name) as scope,user,host,IF(FIND_IN_SET('Select',Table_priv) = 0, 'N', 'Y') AS 'Select',IF(FIND_IN_SET('Insert',Table_priv) = 0, 'N', 'Y') AS 'Insert',IF(FIND_IN_SET('Update',Table_priv) = 0, 'N', 'Y') AS 'Update',IF(FIND_IN_SET('Delete',Table_priv) = 0, 'N', 'Y') AS 'Delete',IF(FIND_IN_SET('Create',Table_priv) = 0, 'N', 'Y') AS 'Create',IF(FIND_IN_SET('Drop',Table_priv) = 0, 'N', 'Y') AS 'Drop',IF(FIND_IN_SET('Grant',Table_priv) = 0, 'N', 'Y') AS 'Grant',IF(FIND_IN_SET('References',Table_priv) = 0, 'N', 'Y') AS 'References',IF(FIND_IN_SET('Index',Table_priv) = 0, 'N', 'Y') AS 'Index',IF(FIND_IN_SET('Alter',Table_priv) = 0, 'N', 'Y') AS 'Alter',IF(FIND_IN_SET('Create_View',Table_priv) = 0, 'N', 'Y') AS 'Create View',IF(FIND_IN_SET('Show_view',Table_priv) = 0, 'N', 'Y') AS 'Show view',IF(FIND_IN_SET('Trigger',Table_priv) = 0, 'N', 'Y') AS 'Trigger' FROM mysql.tables_priv WHERE 'popcorn' LIKE Db AND 'actors_movies' LIKE Table_name
+2016-08-24T20:23:06.689625Z	  448 Query	SELECT CONCAT(Db,'.',Table_name,'.',Column_name) as scope,user,host,IF(FIND_IN_SET('Select',Column_priv) = 0, 'N', 'Y') AS 'Select',IF(FIND_IN_SET('Insert',Column_priv) = 0, 'N', 'Y') AS 'Insert',IF(FIND_IN_SET('Update',Column_priv) = 0, 'N', 'Y') AS 'Update',IF(FIND_IN_SET('References',Column_priv) = 0, 'N', 'Y') AS 'References' FROM mysql.columns_priv WHERE Db LIKE 'popcorn' AND Table_name LIKE 'actors_movies'
+2016-08-24T20:23:07.930071Z	  448 Query	SHOW TRIGGERS FROM `popcorn` WHERE `Table` = 'actors_movies'
+2016-08-24T20:23:07.930483Z	  448 Query	SHOW CREATE TABLE `popcorn`.`actors_movies`
+2016-08-24T20:23:07.930783Z	  448 Query	SHOW SESSION VARIABLES LIKE 'sql_mode'
+2016-08-24T20:23:07.969791Z	  448 Query	SHOW DATABASES LIKE 'popcorn'
+2016-08-24T20:23:07.970047Z	  448 Query	SHOW FULL TABLES FROM `popcorn` LIKE '%'
+2016-08-24T20:23:08.167519Z	  449 Query	SELECT * FROM popcorn.actors_movies
+LIMIT 0, 1000
+2016-08-24T20:23:08.167937Z	  448 Query	SELECT st.* FROM performance_schema.events_statements_current st JOIN performance_schema.threads thr ON thr.thread_id = st.thread_id WHERE thr.processlist_id = 449
+2016-08-24T20:23:08.168432Z	  448 Query	SELECT st.* FROM performance_schema.events_stages_history_long st WHERE st.nesting_event_id = 102
+2016-08-24T20:23:08.168726Z	  448 Query	SELECT st.* FROM performance_schema.events_waits_history_long st WHERE st.nesting_event_id = 102
+2016-08-24T20:23:08.181842Z	  448 Query	SHOW INDEX FROM `popcorn`.`actors_movies`
+2016-08-24T20:30:13.993390Z	  818 Quit	
+2016-08-24T20:30:13.994238Z	  817 Quit	
+2016-08-24T20:30:13.994283Z	  816 Quit	
+2016-08-24T20:30:13.994313Z	  815 Quit	
+2016-08-24T20:30:13.994387Z	  814 Quit	
+2016-08-24T20:30:13.994454Z	  813 Quit	
+2016-08-24T20:30:13.994515Z	  812 Quit	
+2016-08-24T20:30:13.994558Z	  811 Quit	
+2016-08-24T20:30:13.994591Z	  810 Quit	
+2016-08-24T20:30:13.994597Z	  809 Quit	
+2016-08-24T20:30:20.244184Z	  819 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.247949Z	  819 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.264619Z	  819 Query	SET NAMES latin1
+2016-08-24T20:30:20.264840Z	  819 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.265223Z	  819 Query	SET autocommit=1
+2016-08-24T20:30:20.267419Z	  820 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.267698Z	  820 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.268264Z	  820 Query	SET NAMES latin1
+2016-08-24T20:30:20.268417Z	  820 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.268561Z	  820 Query	SET autocommit=1
+2016-08-24T20:30:20.269956Z	  821 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.270236Z	  821 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.270742Z	  821 Query	SET NAMES latin1
+2016-08-24T20:30:20.270864Z	  821 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.271009Z	  821 Query	SET autocommit=1
+2016-08-24T20:30:20.272417Z	  822 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.272641Z	  822 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.273133Z	  822 Query	SET NAMES latin1
+2016-08-24T20:30:20.273307Z	  822 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.273516Z	  822 Query	SET autocommit=1
+2016-08-24T20:30:20.274683Z	  823 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.274936Z	  823 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.275398Z	  823 Query	SET NAMES latin1
+2016-08-24T20:30:20.275532Z	  823 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.275677Z	  823 Query	SET autocommit=1
+2016-08-24T20:30:20.276855Z	  824 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.277092Z	  824 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.277748Z	  824 Query	SET NAMES latin1
+2016-08-24T20:30:20.278103Z	  824 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.278289Z	  824 Query	SET autocommit=1
+2016-08-24T20:30:20.279772Z	  825 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.279995Z	  825 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.280435Z	  825 Query	SET NAMES latin1
+2016-08-24T20:30:20.280576Z	  825 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.280728Z	  825 Query	SET autocommit=1
+2016-08-24T20:30:20.282058Z	  826 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.282292Z	  826 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.282745Z	  826 Query	SET NAMES latin1
+2016-08-24T20:30:20.282872Z	  826 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.283020Z	  826 Query	SET autocommit=1
+2016-08-24T20:30:20.284204Z	  827 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.284424Z	  827 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.284869Z	  827 Query	SET NAMES latin1
+2016-08-24T20:30:20.285005Z	  827 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.285155Z	  827 Query	SET autocommit=1
+2016-08-24T20:30:20.286625Z	  828 Connect	root@localhost on popcorn using TCP/IP
+2016-08-24T20:30:20.286865Z	  828 Query	/* mysql-connector-java-5.1.39 ( Revision: 3289a357af6d09ecc1a10fd3c26e95183e5790ad ) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_buffer_length AS net_buffer_length, @@net_write_timeout AS net_write_timeout, @@query_cache_size AS query_cache_size, @@query_cache_type AS query_cache_type, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@tx_isolation AS tx_isolation, @@wait_timeout AS wait_timeout
+2016-08-24T20:30:20.287270Z	  828 Query	SET NAMES latin1
+2016-08-24T20:30:20.287402Z	  828 Query	SET character_set_results = NULL
+2016-08-24T20:30:20.287548Z	  828 Query	SET autocommit=1
+2016-08-24T20:30:44.975622Z	  828 Query	set session transaction read only
+2016-08-24T20:30:44.975950Z	  828 Query	SET autocommit=0
+2016-08-24T20:30:45.003122Z	  828 Query	select count(movie0_.id) as col_0_0_ from movies movie0_
+2016-08-24T20:30:45.006218Z	  828 Query	select movie0_.id as id1_2_, movie0_.created_at as created_2_2_, movie0_.genre as genre3_2_, movie0_.name as name4_2_, movie0_.rating as rating5_2_, movie0_.released as released6_2_, movie0_.studio_id as studio_i9_2_, movie0_.updated_at as updated_7_2_, movie0_.version as version8_2_ from movies movie0_ limit 3
+2016-08-24T20:30:45.018193Z	  828 Query	select studio0_.id as id1_3_0_, studio0_.created_at as created_2_3_0_, studio0_.est as est3_3_0_, studio0_.name as name4_3_0_, studio0_.updated_at as updated_5_3_0_, studio0_.version as version6_3_0_ from studios studio0_ where studio0_.id=1
+2016-08-24T20:30:45.021835Z	  828 Query	select studio0_.id as id1_3_0_, studio0_.created_at as created_2_3_0_, studio0_.est as est3_3_0_, studio0_.name as name4_3_0_, studio0_.updated_at as updated_5_3_0_, studio0_.version as version6_3_0_ from studios studio0_ where studio0_.id=2
+2016-08-24T20:30:45.023821Z	  828 Query	commit
+2016-08-24T20:30:45.024026Z	  828 Query	SET autocommit=1
+2016-08-24T20:30:45.024398Z	  828 Query	select @@session.tx_read_only
+2016-08-24T20:30:45.024694Z	  828 Query	set session transaction read write
+2016-08-24T20:30:45.077293Z	  828 Query	select actors0_.movie_id as movie_id1_1_0_, actors0_.actor_id as actor_id2_1_0_, actor1_.id as id1_0_1_, actor1_.birthday as birthday2_0_1_, actor1_.created_at as created_3_0_1_, actor1_.gender as gender4_0_1_, actor1_.name as name5_0_1_, actor1_.updated_at as updated_6_0_1_, actor1_.version as version7_0_1_ from actors_movies actors0_ inner join actors actor1_ on actors0_.actor_id=actor1_.id where actors0_.movie_id=1
+2016-08-24T20:30:45.082738Z	  828 Query	select actors0_.movie_id as movie_id1_1_0_, actors0_.actor_id as actor_id2_1_0_, actor1_.id as id1_0_1_, actor1_.birthday as birthday2_0_1_, actor1_.created_at as created_3_0_1_, actor1_.gender as gender4_0_1_, actor1_.name as name5_0_1_, actor1_.updated_at as updated_6_0_1_, actor1_.version as version7_0_1_ from actors_movies actors0_ inner join actors actor1_ on actors0_.actor_id=actor1_.id where actors0_.movie_id=2
+2016-08-24T20:30:45.084602Z	  828 Query	select actors0_.movie_id as movie_id1_1_0_, actors0_.actor_id as actor_id2_1_0_, actor1_.id as id1_0_1_, actor1_.birthday as birthday2_0_1_, actor1_.created_at as created_3_0_1_, actor1_.gender as gender4_0_1_, actor1_.name as name5_0_1_, actor1_.updated_at as updated_6_0_1_, actor1_.version as version7_0_1_ from actors_movies actors0_ inner join actors actor1_ on actors0_.actor_id=actor1_.id where actors0_.movie_id=3
+2016-08-24T20:35:05.100551Z	  828 Query	SELECT 1
+2016-08-24T20:35:05.100902Z	  828 Query	set session transaction read only
+2016-08-24T20:35:05.101191Z	  828 Query	SET autocommit=0
+2016-08-24T20:35:05.102107Z	  828 Query	select movie0_.id as id1_2_0_, movie0_.created_at as created_2_2_0_, movie0_.genre as genre3_2_0_, movie0_.name as name4_2_0_, movie0_.rating as rating5_2_0_, movie0_.released as released6_2_0_, movie0_.studio_id as studio_i9_2_0_, movie0_.updated_at as updated_7_2_0_, movie0_.version as version8_2_0_, studio1_.id as id1_3_1_, studio1_.created_at as created_2_3_1_, studio1_.est as est3_3_1_, studio1_.name as name4_3_1_, studio1_.updated_at as updated_5_3_1_, studio1_.version as version6_3_1_ from movies movie0_ left outer join studios studio1_ on movie0_.studio_id=studio1_.id where movie0_.id=1
+2016-08-24T20:35:05.103375Z	  828 Query	commit
+2016-08-24T20:35:05.103559Z	  828 Query	SET autocommit=1
+2016-08-24T20:35:05.103790Z	  828 Query	select @@session.tx_read_only
+2016-08-24T20:35:05.104001Z	  828 Query	set session transaction read write
+2016-08-24T20:35:05.108827Z	  828 Query	select actors0_.movie_id as movie_id1_1_0_, actors0_.actor_id as actor_id2_1_0_, actor1_.id as id1_0_1_, actor1_.birthday as birthday2_0_1_, actor1_.created_at as created_3_0_1_, actor1_.gender as gender4_0_1_, actor1_.name as name5_0_1_, actor1_.updated_at as updated_6_0_1_, actor1_.version as version7_0_1_ from actors_movies actors0_ inner join actors actor1_ on actors0_.actor_id=actor1_.id where actors0_.movie_id=1

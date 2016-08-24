@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - @localhost" uuid="31f4c888-406e-4164-af5a-28ace163175b">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-scope>:</introspection-scope>
+      <resolve-scope>:</resolve-scope>
+    </data-source>
+    <data-source name="MySQL - popcorn@localhost" uuid="52ed4784-025a-4dae-bfbd-c4c8a26c6ab9">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-scope>popcorn:</introspection-scope>
+      <resolve-scope>popcorn:</resolve-scope>
+    </data-source>
+  </component>
+</project>
